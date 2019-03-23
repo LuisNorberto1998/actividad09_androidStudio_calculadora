@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/editText_result"
+        android:layout_width="237dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginRight="224dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_numeroDos" />
+
     <ImageButton
         android:id="@+id/imageButton_suma"
         android:layout_width="110dp"
@@ -24,18 +36,18 @@
 
     <ImageButton
         android:id="@+id/imageButton_resta"
-        android:layout_width="111dp"
-        android:layout_height="112dp"
+        android:layout_width="110dp"
+        android:layout_height="109dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
         android:onClick="operacionResta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton_division"
-        app:layout_constraintVertical_bias="0.688"
+        app:layout_constraintVertical_bias="0.623"
         app:srcCompat="@drawable/ic_resta" />
 
     <ImageButton
@@ -43,15 +55,15 @@
         android:layout_width="108dp"
         android:layout_height="112dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
         android:onClick="operacionMultiplicacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton_resta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.916"
+        app:layout_constraintVertical_bias="0.906"
         app:srcCompat="@drawable/ic_multiplicacion" />
 
     <ImageButton
@@ -134,38 +146,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_numeroDos" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="236dp"
-        android:layout_height="42dp"
+        android:id="@+id/editText_numeroUno"
+        android:layout_width="235dp"
+        android:layout_height="45dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="248dp"
-        android:layout_marginRight="248dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginRight="224dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="237dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="248dp"
-        android:layout_marginRight="248dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText_numeroDos"
         android:layout_width="235dp"
         android:layout_height="43dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="248dp"
-        android:layout_marginRight="248dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginRight="224dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_numeroUno" />
 </android.support.constraint.ConstraintLayout>

@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton_resta"
-        app:layout_constraintVertical_bias="0.537"
+        app:layout_constraintVertical_bias="0.569"
         app:srcCompat="@drawable/ic_suma" />
 
     <ImageButton
@@ -32,12 +32,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@color/colorPrimary"
+        android:onClick="operacionResta"
         app:layout_constraintEnd_toStartOf="@+id/imageButton_division"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_resta"
-        android:onClick="operacionResta"/>
+        app:srcCompat="@drawable/ic_resta" />
 
     <ImageButton
         android:id="@+id/imageButton_multiplicacion"
@@ -48,11 +48,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
+        android:onClick="operacionMultiplicacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton_division"
-        app:srcCompat="@drawable/ic_multiplicacion"
-        android:onClick="operacionMultiplicacion"/>
+        app:srcCompat="@drawable/ic_multiplicacion" />
 
     <ImageButton
         android:id="@+id/imageButton_modulo"
@@ -65,12 +65,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
+        android:onClick="operacionModulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton_multiplicacion"
         app:layout_constraintStart_toEndOf="@+id/imageButton_suma"
         app:layout_constraintTop_toBottomOf="@+id/imageButton_division"
-        app:srcCompat="@drawable/ic_modulo"
-        android:onClick="operacionModulo"/>
+        app:srcCompat="@drawable/ic_modulo" />
 
     <ImageButton
         android:id="@+id/imageButton_division"
@@ -80,10 +80,10 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:background="@color/colorPrimary"
+        android:onClick="operacionDivision"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_division"
-        android:onClick="operacionDivision"/>
+        app:srcCompat="@drawable/ic_division" />
 
     <TextView
         android:id="@+id/textView_numeroUno"
@@ -115,10 +115,10 @@
 
     <TextView
         android:id="@+id/textView_numeroDos2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_width="174dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="36dp"
         android:text="@string/tv_resultado"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -128,38 +128,40 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_numeroDos" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_numeroDos" />
+
+    <EditText
+        android:id="@+id/editText_numeroDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_numeroUno" />
+
+    <EditText
+        android:id="@+id/editText_numeroUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 </android.support.constraint.ConstraintLayout>
